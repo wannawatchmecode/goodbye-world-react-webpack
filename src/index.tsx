@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./app";
-import "./App.scss";
+import "./app.scss";
 
-const el = document.getElementById("app");
+export * from "./manifest";
+
+const el = document.getElementById("goodbyeWorld");
 
 ReactDOM.render(<App />, el);

@@ -1,16 +1,20 @@
 {
-  "name": "react-webpack-starter",
+  "name": "goodbye-world-react-webpack",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "dist/manifest.js",
+  "types": "types/index",
   "scripts": {
     "serve": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production && npm run-script buildDist && npm run-script buildService",
+    "buildDist": "tsc -p ./tsconfig.json",
+    "buildService": "tsc -p ./tsconfig.service.json",
+    "runService": "node ./serviceDist/app.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jason Gallagher",
+  "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -18,6 +22,8 @@
     "@babel/core": "^7.22.17",
     "@babel/preset-env": "^7.22.15",
     "@babel/preset-react": "^7.22.15",
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.17",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "babel-loader": "^9.1.3",
@@ -32,5 +38,14 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wannawatchmecode/goodbye-world-react-webpack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wannawatchmecode/goodbye-world-react-webpack/issues"
+  },
+  "homepage": "https://github.com/wannawatchmecode/goodbye-world-react-webpack#readme",
+  "description": ""
 }

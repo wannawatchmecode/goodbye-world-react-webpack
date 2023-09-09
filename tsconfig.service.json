@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./serviceDist/",
     "noImplicitAny": true,
     "module": "es6",
     "target": "es5",
@@ -10,5 +10,5 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
   },
-  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "include": ["./serviceSrc/**/*.ts"],
 }
